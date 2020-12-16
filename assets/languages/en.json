@@ -1,0 +1,448 @@
+{
+  "login": {
+    "login": "Masuk",
+    "save": "Simpan",
+    "username": "Nama",
+    "password": "Kata Sandi",
+    "forgot": "Lupa Sandi",
+    "or": "Atau",
+    "loginWith": "Masuk Menggunakan",
+    "dont": "Sudah Memiliki Akun ?",
+    "already": "Apakah Anda sudah Memiliki Akun? ",
+    "signUp": "Daftar",
+    "passwordEmpty":"Password harus diisi",
+    "passLength":"Password Min 8 Karakter",
+
+    "forgotPassword": {
+      "forgot": "Lupa Kata Sandi",
+      "desc": "Masukkan Email Anda yang ditautkan dengan Akun Anda",
+      "send": "Kirim",
+      "valid": "Email Harus diisi",
+      "empty": "Email Tidak Valid",
+      "descSucces": "Kami mengirim kode login untuk membantu kembali ke akun anda",
+      "enterCode": "Masukkan Kode Konfirmasi",
+      "confirmCode": "Kode Kofirmasi",
+      "codeValid": "Kode Konfirmasi Tidak Valid"
+    }
+  },
+  "otp": {
+    "code": "Kode Verivikasi",
+    "cek": "Periksa Email Anda",
+    "get": "Tidak Menerima Email",
+    "again": "Kirim Ulang",
+    "send": "Kirim"
+  },
+  "referal": {
+    "have": "Apakah Anda Punya Kode Referral",
+    "skip": "Lewati",
+    "hint": "Kode Referral"
+  },
+  "signUp": {
+    "email": "Email",
+    "phone": "No. Hp",
+    "check": "Cek Email Anda",
+    "agency": {
+      "imAgency": "Saya Agensi",
+      "sg": "Singapura",
+      "id": "Indonesia",
+      "back": "Kembali",
+      "registration": "Pendaftaran Agensi",
+      "nameAgency": "Nama Agensi",
+      "license": "EA License",
+      "aboutCompany": "Tentang Agensi",
+      "description":"Deskripsi",
+      "phone1":"No. Telp 1",
+      "phone2":"No. Telp 1",
+      "mainOffice": "Kantor Pusat",
+      "contactPerson": "Narahubung",
+      "whatappsNumber": "No. WhatApps",
+      "officeNumber": "No. Kantor",
+      "branch": "Cabang 1",
+      "branch2": "Cabang 2",
+      "file":"Pilih Logo",
+      "anotherBranch": "Tambah Cabang Lain",
+      "openingHours": "Jam Buka"
+    }
+  },
+  "save": {
+    "saveEmployer": {
+      "maiden": "Rekomendasi CPMI",
+      "employer": "Employer",
+      "partner": "Partner",
+      "profile": "Profile",
+      "saved": "Tersimpan"
+    },
+    "saveAgency": {
+      "placement": "Penempatan Sejauh Ini"
+    }
+  },
+  "more": {
+    "editProfile": "Edit Profil",
+    "contact": "Hubungi Maiden Helpdesk",
+    "referal": "Refferal Saya",
+    "faq": "Agensi FAQs",
+    "faqEmployeer": "Majikan FAQs",
+    "language": "Bahasa",
+    "notification": "Notifikasi",
+    "about": "Tentang Maiden",
+    "id": "ID Mitra",
+    "price":"Template Harga",
+    "logout": "Keluar",
+    "editProfileScreen": {
+      "employer": "Majikan",
+      "dog": "Anjing",
+      "cat": "Kucing",
+      "other": "Lainnya",
+      "muslim": "Islam",
+      "christian": "Kristen",
+      "catolic": "Katolik",
+      "buddhist": "Budha",
+      "hindu": "Hindu",
+      "normalDiet": "Diet Normal",
+      "muslimDiet": "Diet Muslim",
+      "vegann": "vegan",
+      "vegetarian": "Vegetarian",
+      "gluten": "Bebas Gula",
+      "aboutMe": "Tentang Saya",
+      "firstName": "Nama",
+      "dob": "Tanggal Lahir",
+      "nationality": "Kewarganegaraan",
+      "areaSingapore": "Wilayah Singapura",
+      "houseType": "Tipe Rumah",
+      "kids": "Anak",
+      "pet": "Hewan Peliharaan",
+      "race": "Race",
+      "religion": "Agama",
+      "diet": "Diet",
+      "special": "Pengalaman Menarik",
+      "caution": "Maiden melindungi privasi Anda sesuai dengan PDPA. Silahkan lihat Kebijakan Privasi kami untuk perincian lebih lanjut.",
+      "done": "Selesai",
+      "autistic": "Orang Autis",
+      "mental": "Orang Gangguan Mental",
+      "physically": "Cacat Fisik",
+      "total": "Penyandang Cacat"
+    }
+  },
+  "home": {
+    "agency": {
+      "maid": "CPMI",
+      "SignUpAs": "Daftar Menjadi",
+      "partner": "Mitra",
+      "agency": "Agensi",
+      "employer": "Majikan",
+      "employerBtn":"Majikan Mencari Pembantu",
+      "agencySg": "Agensi Singapura",
+      "agencyId": "Agensi Indonesia",
+      "findMaid": "Cari CPMI",
+      "arrival":"Kedatangan",
+      "age":"Umur",
+      "myMaiden": "CPMI Saya",
+      "find": "Cari Mitra",
+      "myPartner": "Mitra Saya",
+      "appBar": "CPMI",
+      "appBarDetail": "Profil Lengkap CPMI",
+      "manualAddPartner": " Sudah Punya Partner? Mmasukkan ID Partnermu",
+      "dialog": "Kodemu sudah diterima, silahkan hubungi partner untuk masukkan kode ID Partner Punyamu Juga",
+      "payment": {
+        "appBar": "Tambah Bonus Rujukan dan Pesan CPMI",
+        "payNow": "Bayar",
+        "book": "Detail Pembayaran",
+        "total": "Total Biaya Admin",
+        "additional": "Selain biaya admin, saya setuju untuk membayar biaya pesanan sebesar $ 500",
+        "tapping": "Dengan mengetuk tombol diatas, Anda telah menyetujui",
+        "term": "Syarat & Ketentuan",
+        "privacy": "Kebijakan Privasi",
+        "card": "No Kartu"
+      },
+      "myPartnerList": {
+        "phone": "Telp.",
+        "placement": "Penempatan",
+        "maid": "CPMI",
+        "mainOffice": "Kantor Utama",
+        "branch": "Cabang",
+        "available": "CPMI Aktif",
+        "click": "Tekan untuk Buka Kunci",
+        "buttonDetail":"Lihat CPMI diagen ini",
+        "openingHours":"Jam Buka",
+        "email":"Email",
+        "website":"Website",
+        "cp":"Narahubung",
+        "wa": "No. WhatsApp",
+        "officeNumber":"No. Kantor",
+        "otherBranch":"Cabang Lain",
+        "license": "License",
+        "about":"Tentang Perusahaan",
+        "noMaiden":"Tidak Ada CPMI",
+        "appBar": "CPMI",
+        "ex":"Biaya EX",
+        "non":"Biaya Non",
+        "rate":"Peringkat",
+        "review":"Review Majikan",
+        "send":"Kirim Profile CPMI"
+
+      },
+      "maids": {
+        "agencyYet": "Buka",
+        "agencynoYet": "Tutup",
+        "promotion": "Kirim ke Mitra",
+        "chat": "Chat Agensi",
+        "maiden": "CPMI",
+        "createMaid": {
+          "myMaid": "CPMI",
+          "addProfile": "Tambah Profil CPMI",
+          "personalInfos": {
+            "personalInfo": "Informasi Pribadi",
+            "name": "Nama",
+            "noPreferences":"Tidak ada",
+            "philipine":"Filipina",
+            "other":"Lainnya",
+            "somePrimary":"Sekolah Dasar(SD)",
+            "someSecondary":"Sekolah Menengah Pertama(SMP)",
+            "completeSecondary":"Sekolah Menengah Atas(SMA)",
+            "someCollege":"Universitas",
+            "collegeDegree":"Sarjana",
+            "neverMarried":"Belum Menikah",
+            "married":"Menikah",
+            "divorced":"Cerai",
+            "lessThan":"Kurang dari 2 Tahun",
+            "twoYears":"2-5 Tahun",
+            "fiveYears":"5-10 Tahun",
+            "tenYears":">10 Tahun",
+
+            "dob":"Tanggal Lahir",
+            "exp":"Pengalaman di luar negeri",
+            "workBefore": "Pekerjaan Sebelumnya",
+            "odm":"Hari Libur per bulan",
+            "religion":"Agama",
+            "edu": "Pendidikan Terakhir",
+            "siblings": "Jumlah Saudara",
+            "martial":"Status Perkawinan",
+            "child":"Jumlah Anak",
+            "ageChild":"Umur Anak",
+            "fatherName": "Nama Ayah",
+            "motherName":"Nama Ibu",
+            "husbandName":"Nama Suami",
+            "statusHealthFather":"Status Kesehatan Ayah",
+            "statusHealthMother":"Status Kesehatan Ibu",
+            "statusHealthHusband":"Status Kesehatan Suami",
+            "husbandAge": "Umur Suami",
+            "fatherAge": "Umur Ayah",
+            "motherAge": "Umur Ibu ",
+            "historyInfo": {
+              "title": "Rekam Medis",
+              "past": "Penyakit masa lalu dan  sudah ada (termasuk penyakit kronis dan penyakit yang membutuhkan pengobatan)",
+              "mentalIllner": "Gangguan Mental",
+              "epilepsy":"Epilepsi",
+              "asthma":"asma",
+              "diabetes": "Diabetes",
+              "hypertensi": "Hipertensi",
+              "tubercolosis": "Tuberculosis",
+              "allergies": "Alergi",
+              "heartDisease": "Gangguan Jantung",
+              "malaria":"Malaria",
+              "operation": "Operasi",
+              "disability": "Cacat Fisik",
+              "dientra":"Pembatasan Diet",
+              "other":"Lainnya"
+            }
+          },
+          "historyInfo": {
+            "title": "Rekam Medis",
+            "past": "Penyakit masa lalu dan  sudah ada (termasuk penyakit kronis dan penyakit yang membutuhkan pengobatan)",
+            "mentalIllner": "Gangguan Mental",
+            "epilepsy":"Epilepsi",
+            "asthma":"asma",
+            "diabetes": "Diabetes",
+            "hypertensi": "Hipertensi",
+            "tubercolosis": "Tuberculosis",
+            "allergies": "Alergi",
+            "heartDisease": "Gangguan Jantung",
+            "malaria":"Malaria",
+            "operation": "Operasi",
+            "disability": "Cacat Fisik",
+            "dientra":"Pembatasan Diet",
+            "other":"Lainnya"
+          },
+          "skillPriority": {
+            "title": "Urutan prioritas keterampilan yang mencerminkan anda"
+           
+          },
+          "historyOverseas":{
+            "appBar":"Riwayat Pekerjaan Luar Negeri",
+            "years":"Tahun",
+            "fromYear":"Sejak Tahun",
+            "toYear":"Sampai Tahun",
+            "toast":"Mohon Isi Tahun",
+            "history":"Tambah Riwayat Pekerjaan",
+            "workDuties": "Deskripsi Pekerjaan"
+          },
+          "skillHighlight":{
+            "noExp":"Tidak Ada Pengalaman",
+            "hasExp":"CPMI memiliki pengalaman di negarannya",
+            "overExp":"CPMI memiliki pengalaman di luar negeri",
+            "title":"Kemampuan",
+            "study":"Tidak Ada Pengalaman tetapi mau belajar"
+          },
+          "dog":{
+            "noExpDog": "Tidak ada Pengalaman",
+            "hasExp": "Tidak Suka Anjing tapi punya Pengalaman",
+            "overExp": "Suka Anjing tapi tidak punya Pengalaman",
+            "hasExpLike": "Suka Anjing tapi punya Pengalaman"
+          },
+          "cat":{
+            "noExpDog": "Tidak ada Pengalaman",
+            "hasExp": "Tidak Suka Kucing tapi punya Pengalaman",
+            "overExp": "Suka Kucing tapi tidak punya Pengalaman",
+            "hasExpLike": "Suka Kucing tapi punya Pengalaman"
+          },
+          "price":{
+            "title":"Harga & Rincian",
+            "downPayment":"Uang Muka",
+            "serviceFee":"Uang Jasa",
+            "insurance":"Asuransi",
+            "cost":"Biaya",
+            "embassyContact":"Kontak Kedutaan",
+            "replacement":"Penggantian",
+            "salary":"Gaji 8 Bulan",
+            "airTicket":"Tiket Pesawat",
+            "total":"Total",
+            "days":"Hari"
+          },
+          "criteria": {
+            "cooking": "Memasak",
+            "laundry": "Mencuci",
+            "cleaning": "Membersihkan",
+            "title": "Preferensi Kerja"
+          }
+        }
+      },
+      "employers": {
+        "appBar": "Cari Majikan",
+        "name": "Nama",
+        "area": "Wilayah",
+        "nationality": "Kewarganegaraan",
+        "family": "Profil Keluarga",
+        "religion": "Agama",
+        "search": {
+          "match": "Profil yang Cocok",
+          "recomendation": "Rekomendasi CPMI",
+          "save": "Simpan"
+        }
+      },
+      "referal": {
+        "myReferall": "Refferal Saya",
+        "canSee": "Lihat status referensi ",
+        "that": "yang dikirim ke teman Anda",
+        "check": "Periksa",
+        "copy": "Salin Kode",
+        "appBar":"Status Referral",
+        "bank":"Kode Referral Anda",
+        "share":"Bagikan Kode referensi ini dengan teman dan keluarga",
+        "voucher":"Anda akan mendapatkan voucher 1.000.000 IDR  untuk setiap referral yang berhasil.",
+      "noReferral":"Belum ada Kode Referral yang digunakan ",
+      "idr":"Anda akan mendapatkan voucher 1.000.000 IDR  untuk setiap referral yang berhasil.",
+      "employeer":"",
+      "noRefferal": "Belum Referral yang digunakan"
+
+    }
+    },
+    "searchMaid": {
+      "appBar": "Majikan",
+      "skip": "Lewati",
+      "done": "Selesai",
+      "next": "Selanjutnya"
+    },
+    "partner":{
+      "appBar": "Mitra",
+      "mainOffice": "Kantor Pusat",
+      "branch": "Cabang",
+      "placement":"Penempatan",
+      "available":"CPMI Aktif",
+      "maid":"CPMI",
+      "opening":"Jam Buka",
+      "cp":"Narahubung",
+"wa":"No. WhatsApp",
+"noKantor":"No. Kantor",
+      "view":"Lihat CPMI",
+      "cabangLain":"Cabang Lain"
+
+          },
+    "partnerDetail":{
+      "appBar": "Mitra Singapura",
+      "mainOffice": "Kantor Pusat",
+      "branch": "Cabang",
+      "placement":"Penempatan",
+      "available":"CPMI Aktif",
+      "maid":"CPMI",
+
+      "view":"Lihat CPMI"
+          }
+  },
+  "maidList": {
+    "save": "Simpan",
+    "maidenInfo": {
+      "name": "Nama",
+      "age": "Usia",
+      "exp": "Pengalaman",
+      "anak": "Anak",
+      "language": "Bahasa Inggris",
+      "english": "Bahasa Inggris"
+    }
+  },
+  "searchMaid": {
+    "age": "Umur CPMI",
+    "year": "Tahun Pengalaman",
+    "countries": "Negara Bekerja sebelumnya",
+    "odm": "Hari Libur dalam 1 Bulan",
+    "religion": "Agama",
+    "children": "Anak-Anak",
+    "sort": "Urutkan Kemampuan CPMI yang akan anda cari",
+    "cleaning": "Membersihkan",
+    "Laundry": "Mencuci",
+    "Cooking": "Memasak",
+    "responbility": "Tanggung Jawab",
+    "eldery": "Orang tua/Disabilitas",
+    "elderyNew": "Lansia",
+    "baby": "Bayi Umur 0 - 24 Bulan",
+    "childrenYear": "Anak Umur 2-12 Tahun",
+    "notImportant": "Tidak Penting",
+    "maidenCountry": "CPMI memiliki pengalaman di Negaranya",
+    "maidenOverseas": "CPMI memiliki pengalaman di Luar Negeri",
+    "language": "Keterampilan Bahasa",
+    "mandarin": "Mandarin",
+    "english": "Bahasa Inggris",
+    "other": "Lainnya",
+    "otherQuestion": "Pertanyaan Lainnya",
+    "understand": "Dapat Memahami tetapi tidak dapat berbicara",
+    "basic": "Percakapan Dasar",
+    "fluent": "Fasih",
+    "handlePork": "Bersedia memegang babi?",
+    "eatPork": "Bersedia mengkonsumsi babi",
+    "garden": "Mampu melakukan pekerjaan berkebun?",
+    "able": "Mampu melakukan menjahit?",
+    "washCar": "Bersedia mencuci mobil?",
+    "looking": "Apa yang akan saya cari dari CPMI",
+    "medical":"Medis",
+    "photo":"Foto",
+    "muslimFamily": "Pengalaman Memasak untuk keluarga muslim?",
+    "veganFamily": "Pengalaman Memasak untuk keluarga vegan?",
+    "vegetarianFamily": "Pengalaman Memasak untuk keluarga vegetariann?",
+
+    "glutten": "Pengalaman Memasak untuk keluarga bebas gula?",
+   
+    "recom":"Rekom",
+    "addPhoto":"Tambah Foto Profil",
+    "encripsi":"Dokumen Anda dienkripsi sehingga hanya Anda yang dapat melihatnya. Bahkan administrator Maiden tidak dapat melihatnya. Satu-satunya dokumen yang terlihat oleh orang lain adalah paspor pembantu dan tiket pesawat.",
+    "sgp":"Semua Harga dalam dollar Singapore"
+
+  },
+  "saveEmployer": {
+    "setInterview": "Atur Wawancara"
+  },
+  "inbox":{
+    "appBar":"Pesan Masuk",
+    "tabBar":"Partner",
+    "employeer":"Majikan",
+    "recomendation":"Rekomendasi CPMI"
+  }
+}
