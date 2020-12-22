@@ -6,6 +6,7 @@ import 'package:flutter_template/localization/application.dart';
 import 'package:flutter_template/shared/helper/helper.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
   Cache.init();
   runApp(MyHomePage());
