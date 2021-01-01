@@ -16,7 +16,7 @@ class Network {
       // print("### Response: ${response.body}");
       result = response.body;
     } catch (e) {
-      print('### Error: ${e.message}');
+      print('### Error: $e');
     }
     return result;
   }
