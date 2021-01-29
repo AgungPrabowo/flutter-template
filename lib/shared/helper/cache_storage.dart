@@ -17,10 +17,32 @@ class Cache {
     return prefs?.getString(key) ?? "";
   }
 
+  static Future<bool> getCacheBool({@required String key}) async {
+    final SharedPreferences prefs = await _instance;
+    return prefs?.getBool(key) ?? false;
+  }
+
+  static Future<bool> setCacheBool(
+      {@required String key, @required bool data}) async {
+    final SharedPreferences prefs = await _instance;
+    return prefs?.setBool(key, data) ?? Future.value(false);
+  }
+
   static Future<bool> setCache(
       {@required String key, @required String data}) async {
     final SharedPreferences prefs = await _instance;
     return prefs?.setString(key, data) ?? Future.value(false);
+  }
+
+  static Future<List<String>> getCacheList({@required String key}) async {
+    final SharedPreferences prefs = await _instance;
+    return prefs?.getStringList(key) ?? [];
+  }
+
+  static Future<bool> setCacheList(
+      {@required String key, @required List<String> data}) async {
+    final SharedPreferences prefs = await _instance;
+    return prefs?.setStringList(key, data) ?? Future.value(false);
   }
 
   static Future<bool> removeCache({@required String key}) async {
