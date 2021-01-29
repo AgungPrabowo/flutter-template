@@ -40,10 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: Styles.themeData(false, context), // darkmode
       supportedLocales: [
         Locale('en', 'US'),
         Locale('id', 'ID'),
