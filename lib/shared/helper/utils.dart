@@ -1,4 +1,3 @@
-import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -32,20 +31,5 @@ class Utils {
         },
       ),
     );
-  }
-
-  static void myFlush(context, msg, color) {
-    Flushbar(
-      message: msg,
-      duration: Duration(milliseconds: 5000),
-      backgroundColor: color,
-      boxShadows: [
-        BoxShadow(
-          color: Colors.red[800],
-          offset: Offset(0.0, 2.0),
-          blurRadius: 3.0,
-        )
-      ],
-    )..show(context);
   }
 }

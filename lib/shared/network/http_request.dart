@@ -8,11 +8,11 @@ class Network {
   static Future<String> getRequest({String path = ""}) async {
     String result = "";
 
-    // print("### Base Url: ${KeysGambling.BASE_API_URL + path}");
+    // print("### Base Url: ${Keys.BASE_API_URL + path}");
 
     try {
       final response = await http
-          .get(KeysGambling.BASE_API_URL + path)
+          .get(Uri.parse(Keys.BASE_API_URL + path))
           .timeout(Duration(minutes: 3));
       // print("### Response: ${response.body}");
       result = response.body;
@@ -21,13 +21,15 @@ class Network {
     }
     return result;
   }
-  static Future<String> postRequest({String path = "", Map<String, dynamic> body}) async {
+
+  static Future<String> postRequest(
+      {String path = "", Map<String, dynamic>? body}) async {
     String result = "";
 
-    // print("### Base Url: ${KeysGambling.BASE_API_URL + path}");
+    // print("### Base Url: ${Keys.BASE_API_URL + path}");
 
     try {
-      final response = await http.post(KeysGambling.BASE_API_URL + path,
+      final response = await http.post(Uri.parse(Keys.BASE_API_URL + path),
           body: json.encode(body),
           headers: {
             "Content-Type": "application/json"
