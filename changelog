@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.0+4
+- dark mode
+- multi languages
+- example admob
+- implement font
+
 ## v1.0.0+3
 - migrate null safety
 - remove translate
