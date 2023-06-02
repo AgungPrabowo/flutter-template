@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
-class YourScreen extends StatefulWidget {
-  @override
-  _YourScreenState createState() => _YourScreenState();
-}
+class YourScreen extends StatelessWidget {
+  const YourScreen({super.key});
 
-class _YourScreenState extends State<YourScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Placeholder();
   }
 }

@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,9 +21,9 @@ void main() async {
         color: Colors.white,
         child: EasyLocalization(
           supportedLocales: Keys.listLocal.map((e) => e.locale).toList(),
-          fallbackLocale: Locale('en', 'US'),
+          fallbackLocale: const Locale('en', 'US'),
           path: 'assets/languages',
-          child: MyHomePage(),
+          child: const MyHomePage(),
         ),
       ),
     );
@@ -32,42 +31,29 @@ void main() async {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage();
+  const MyHomePage({super.key});
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<MainBloc>(
-      create: (context) => MainBloc()..add(InitMainEvent()),
+      create: (context) => MainBloc(),
       child: BlocBuilder<MainBloc, MainState>(
         builder: (context, state) {
-          if (state is MainLoading) {
-            return Splash();
-          } else if (state is MainLoaded) {
+          if (state.isLoading) {
+            return const Splash();
+          } else {
             return MaterialApp(
               localizationsDelegates: context.localizationDelegates,
               supportedLocales: context.supportedLocales,
               locale: context.locale,
-              title: Keys.APP_NAME,
+              title: Keys.appName,
               theme: Styles.themeData(state.isDarkMode, context),
-              home: DashboardScreen()
-            );
-          } else {
-            if (state is MainError) {
-              Utils.showToast(state.error);
-            }
-            return MaterialApp(
-              home: Scaffold(
-                body: Center(
-                  child: Icon(
-                    Icons.error,
-                  ),
-                ),
-              ),
+              home: const DashboardScreen(),
             );
           }
         },

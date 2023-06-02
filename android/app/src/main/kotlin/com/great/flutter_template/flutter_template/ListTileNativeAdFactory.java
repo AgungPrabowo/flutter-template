@@ -1,4 +1,4 @@
-package com.example.flutter_template;
+package com.great.flutter_template.flutter_template;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
 

@@ -12,12 +12,14 @@ const String testDevice = 'YOUR_DEVICE_ID';
 const int maxFailedLoadAttempts = 3;
 
 class ExampleAdmob extends StatefulWidget {
+  const ExampleAdmob({super.key});
+
   @override
-  _ExampleAdmobState createState() => _ExampleAdmobState();
+  State<ExampleAdmob> createState() => _ExampleAdmobState();
 }
 
 class _ExampleAdmobState extends State<ExampleAdmob> {
-  static final AdRequest request = AdRequest(
+  final AdRequest request = const AdRequest(
     keywords: <String>['foo', 'bar'],
     contentUrl: 'http://foo.com/bar.html',
     nonPersonalizedAds: true,
@@ -41,16 +43,16 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
 
   void _createInterstitialAd() {
     InterstitialAd.load(
-        adUnitId: InterstitialAd.testAdUnitId,
+        adUnitId: 'ca-app-pub-3940256099942544/1033173712',
         request: request,
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (InterstitialAd ad) {
-            print('$ad loaded');
+            debugPrint('$ad loaded');
             _interstitialAd = ad;
             _numInterstitialLoadAttempts = 0;
           },
           onAdFailedToLoad: (LoadAdError error) {
-            print('InterstitialAd failed to load: $error.');
+            debugPrint('InterstitialAd failed to load: $error.');
             _numInterstitialLoadAttempts += 1;
             _interstitialAd = null;
             if (_numInterstitialLoadAttempts <= maxFailedLoadAttempts) {
@@ -62,19 +64,19 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
 
   void _showInterstitialAd() {
     if (_interstitialAd == null) {
-      print('Warning: attempt to show interstitial before loaded.');
+      debugPrint('Warning: attempt to show interstitial before loaded.');
       return;
     }
     _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (InterstitialAd ad) =>
-          print('ad onAdShowedFullScreenContent.'),
+          debugPrint('ad onAdShowedFullScreenContent.'),
       onAdDismissedFullScreenContent: (InterstitialAd ad) {
-        print('$ad onAdDismissedFullScreenContent.');
+        debugPrint('$ad onAdDismissedFullScreenContent.');
         ad.dispose();
         _createInterstitialAd();
       },
       onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
-        print('$ad onAdFailedToShowFullScreenContent: $error');
+        debugPrint('$ad onAdFailedToShowFullScreenContent: $error');
         ad.dispose();
         _createInterstitialAd();
       },
@@ -85,16 +87,16 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
 
   void _createRewardedAd() {
     RewardedAd.load(
-        adUnitId: RewardedAd.testAdUnitId,
+        adUnitId: 'ca-app-pub-3940256099942544/5224354917',
         request: request,
         rewardedAdLoadCallback: RewardedAdLoadCallback(
           onAdLoaded: (RewardedAd ad) {
-            print('$ad loaded.');
+            debugPrint('$ad loaded.');
             _rewardedAd = ad;
             _numRewardedLoadAttempts = 0;
           },
           onAdFailedToLoad: (LoadAdError error) {
-            print('RewardedAd failed to load: $error');
+            debugPrint('RewardedAd failed to load: $error');
             _rewardedAd = null;
             _numRewardedLoadAttempts += 1;
             if (_numRewardedLoadAttempts <= maxFailedLoadAttempts) {
@@ -106,26 +108,29 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
 
   void _showRewardedAd() {
     if (_rewardedAd == null) {
-      print('Warning: attempt to show rewarded before loaded.');
+      debugPrint('Warning: attempt to show rewarded before loaded.');
       return;
     }
     _rewardedAd!.fullScreenContentCallback = FullScreenContentCallback(
       onAdShowedFullScreenContent: (RewardedAd ad) =>
-          print('ad onAdShowedFullScreenContent.'),
+          debugPrint('ad onAdShowedFullScreenContent.'),
       onAdDismissedFullScreenContent: (RewardedAd ad) {
-        print('$ad onAdDismissedFullScreenContent.');
+        debugPrint('$ad onAdDismissedFullScreenContent.');
         ad.dispose();
         _createRewardedAd();
       },
       onAdFailedToShowFullScreenContent: (RewardedAd ad, AdError error) {
-        print('$ad onAdFailedToShowFullScreenContent: $error');
+        debugPrint('$ad onAdFailedToShowFullScreenContent: $error');
         ad.dispose();
         _createRewardedAd();
       },
     );
 
-    _rewardedAd!.show(onUserEarnedReward: (RewardedAd ad, RewardItem reward) {
-      print('$ad with reward $RewardItem(${reward.amount}, ${reward.type}');
+    _rewardedAd!.show(
+        onUserEarnedReward: (AdWithoutView ad, RewardItem reward) {
+      debugPrint(
+        '$ad with reward $RewardItem(${reward.amount}, ${reward.type}',
+      );
     });
     _rewardedAd = null;
   }
@@ -138,7 +143,7 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
     );
 
     if (size == null) {
-      print('Unable to get height of anchored banner.');
+      debugPrint('Unable to get height of anchored banner.');
       return;
     }
 
@@ -150,17 +155,15 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
           : 'ca-app-pub-3940256099942544/2934735716',
       listener: BannerAdListener(
         onAdLoaded: (Ad ad) {
-          print('$BannerAd loaded.');
+          debugPrint('$BannerAd loaded.');
           setState(() {
             _anchoredBanner = ad as BannerAd?;
           });
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
-          print('$BannerAd failedToLoad: $error');
+          debugPrint('$BannerAd failedToLoad: $error');
           ad.dispose();
         },
-        onAdOpened: (Ad ad) => print('$BannerAd onAdOpened.'),
-        onAdClosed: (Ad ad) => print('$BannerAd onAdClosed.'),
       ),
     );
     return banner.load();
@@ -176,7 +179,7 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: Builder(builder: (BuildContext context) {
         if (!_loadingAnchoredBanner) {
           _loadingAnchoredBanner = true;
@@ -216,7 +219,7 @@ class _ExampleAdmobState extends State<ExampleAdmob> {
           body: SafeArea(
             child: Column(
               children: <Widget>[
-                Expanded(child: ReusableInlineAdmob()),
+                const Expanded(child: ReusableInlineAdmob()),
                 if (_anchoredBanner != null)
                   Container(
                     color: Colors.green,

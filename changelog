@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.0+5
+- upgrade dart 2.19.5
+- upgrade flutter SDK 3.7.8
+
 ## v1.0.0+4
 - dark mode
 - multi languages
