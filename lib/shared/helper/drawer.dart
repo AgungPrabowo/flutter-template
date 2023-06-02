@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_template/dashboard.dart';
 import 'package:flutter_template/example_admob.dart';
@@ -13,7 +12,7 @@ class HelperDrawer {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.blue,
             ),
             child: SvgPicture.asset(
@@ -27,14 +26,14 @@ class HelperDrawer {
             title: const Text('home').tr(),
             onTap: () {
               Navigator.pop(context);
-              Utils.myPushPageReplacement(DashboardScreen(), context);
+              Utils.myPushPageReplacement(const DashboardScreen(), context);
             },
           ),
           ListTile(
             title: const Text('admob').tr(),
             onTap: () {
               Navigator.pop(context);
-              Utils.myPushPageReplacement(ExampleAdmob(), context);
+              Utils.myPushPageReplacement(const ExampleAdmob(), context);
             },
           ),
         ],

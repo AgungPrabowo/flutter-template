@@ -1,40 +1,33 @@
 part of 'main_bloc.dart';
 
-abstract class MainState extends Equatable {
-  const MainState();
-
-  @override
-  List<Object> get props => [];
-}
-
-class MainInitial extends MainState {}
-
-class MainLoading extends MainState {}
-
-class MainError extends MainState {
-  final String error;
-
-  MainError(this.error);
-}
-
-class MainLoaded extends MainState {
+class MainState {
   final bool isDarkMode;
   final String language;
+  final bool isLoading;
 
-  MainLoaded({
+  const MainState({
     required this.isDarkMode,
     required this.language,
+    required this.isLoading,
   });
 
-  MainLoaded copyWith({
+  MainState copyWith({
     bool? isDarkMode,
     String? language,
+    bool? isLoading,
   }) =>
-      MainLoaded(
+      MainState(
         isDarkMode: isDarkMode ?? this.isDarkMode,
         language: language ?? this.language,
+        isLoading: isLoading ?? this.isLoading,
       );
+}
 
-  @override
-  List<Object> get props => [isDarkMode, language];
+class MainInitial extends MainState {
+  MainInitial()
+      : super(
+          isDarkMode: false,
+          isLoading: true,
+          language: "id",
+        );
 }

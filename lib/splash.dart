@@ -4,8 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'shared/helper/keys.dart';
 
 class Splash extends StatefulWidget {
+  const Splash({super.key});
+
   @override
-  _SplashState createState() => _SplashState();
+  State<Splash> createState() => _SplashState();
 }
 
 class _SplashState extends State<Splash> {
@@ -25,8 +27,8 @@ class _SplashState extends State<Splash> {
                   width: 150,
                 ),
               ),
-              Text(
-                Keys.APP_NAME,
+              const Text(
+                Keys.appName,
                 style: TextStyle(fontSize: 20),
               )
             ],

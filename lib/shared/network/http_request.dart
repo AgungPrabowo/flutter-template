@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import '../shared.dart';
@@ -12,12 +13,12 @@ class Network {
 
     try {
       final response = await http
-          .get(Uri.parse(Keys.BASE_API_URL + path))
-          .timeout(Duration(minutes: 3));
+          .get(Uri.parse(Keys.baseApiUrl + path))
+          .timeout(const Duration(minutes: 3));
       // print("### Response: ${response.body}");
       result = response.body;
     } catch (e) {
-      print('### Error: $e');
+      debugPrint('### Error: $e');
     }
     return result;
   }
@@ -29,15 +30,15 @@ class Network {
     // print("### Base Url: ${Keys.BASE_API_URL + path}");
 
     try {
-      final response = await http.post(Uri.parse(Keys.BASE_API_URL + path),
+      final response = await http.post(Uri.parse(Keys.baseApiUrl + path),
           body: json.encode(body),
           headers: {
             "Content-Type": "application/json"
-          }).timeout(Duration(minutes: 3));
+          }).timeout(const Duration(minutes: 3));
       // print("### Response: ${response.body}");
       result = response.body;
     } catch (e) {
-      print('### Error: $e');
+      debugPrint('### Error: $e');
     }
     return result;
   }

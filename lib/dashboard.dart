@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_template/shared/helper/drawer.dart';
@@ -6,23 +8,25 @@ import 'package:flutter_template/shared/shared.dart';
 import 'main.dart';
 
 class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     Future<void> setTheme(bool isDark) async {
-      await Cache.setCacheBool(Keys.DARK_MODE, isDark);
+      await Cache.setCacheBool(Keys.darkMode, isDark);
       Navigator.of(context).popUntil((route) => route.isFirst);
-      Utils.myPushPageReplacement(MyHomePage(), context);
+      Utils.myPushPageReplacement(const MyHomePage(), context);
     }
 
     return Scaffold(
       appBar: AppBar(
         title: Row(
           children: [
-            Text("home").tr(),
-            Spacer(),
+            const Text("home").tr(),
+            const Spacer(),
             FutureBuilder<bool>(
               initialData: false,
-              future: Cache.getCacheBool(Keys.DARK_MODE),
+              future: Cache.getCacheBool(Keys.darkMode),
               builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
                 IconData icon;
                 bool isDarkmode = snapshot.data ?? false;
@@ -45,7 +49,7 @@ class DashboardScreen extends StatelessWidget {
       ),
       drawer: HelperDrawer().drawer(context),
       body: Center(
-        child: Text("indonesianIs").tr(),
+        child: const Text("indonesianIs").tr(),
       ),
     );
   }

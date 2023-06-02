@@ -5,8 +5,10 @@ import 'dart:io' show Platform;
 import 'package:easy_localization/easy_localization.dart';
 
 class ReusableInlineAdmob extends StatefulWidget {
+  const ReusableInlineAdmob({super.key});
+
   @override
-  _ReusableInlineAdmobState createState() => _ReusableInlineAdmobState();
+  State<ReusableInlineAdmob> createState() => _ReusableInlineAdmobState();
 }
 
 class _ReusableInlineAdmobState extends State<ReusableInlineAdmob> {
@@ -24,7 +26,7 @@ class _ReusableInlineAdmobState extends State<ReusableInlineAdmob> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: ListView.separated(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             itemCount: 20,
             separatorBuilder: (BuildContext context, int index) {
               return Container(height: 40);
@@ -32,7 +34,7 @@ class _ReusableInlineAdmobState extends State<ReusableInlineAdmob> {
             itemBuilder: (BuildContext context, int index) {
               final BannerAd? bannerAd = _bannerAd;
               if (index == 5 && _bannerAdIsLoaded && bannerAd != null) {
-                return Container(
+                return SizedBox(
                     height: bannerAd.size.height.toDouble(),
                     width: bannerAd.size.width.toDouble(),
                     child: AdWidget(ad: bannerAd));
@@ -42,7 +44,7 @@ class _ReusableInlineAdmobState extends State<ReusableInlineAdmob> {
               if (index == 10 &&
                   _adManagerBannerAdIsLoaded &&
                   adManagerBannerAd != null) {
-                return Container(
+                return SizedBox(
                     height: adManagerBannerAd.sizes[0].height.toDouble(),
                     width: adManagerBannerAd.sizes[0].width.toDouble(),
                     child: AdWidget(ad: _adManagerBannerAd!));
@@ -50,11 +52,11 @@ class _ReusableInlineAdmobState extends State<ReusableInlineAdmob> {
 
               final NativeAd? nativeAd = _nativeAd;
               if (index == 15 && _nativeAdIsLoaded && nativeAd != null) {
-                return Container(
+                return SizedBox(
                     width: 250, height: 350, child: AdWidget(ad: nativeAd));
               }
 
-              return Text(
+              return const Text(
                 "exampleText",
                 style: TextStyle(fontSize: 24),
               ).tr();
@@ -74,60 +76,60 @@ class _ReusableInlineAdmobState extends State<ReusableInlineAdmob> {
             : 'ca-app-pub-3940256099942544/2934735716',
         listener: BannerAdListener(
           onAdLoaded: (Ad ad) {
-            print('$BannerAd loaded.');
+            debugPrint('$BannerAd loaded.');
             setState(() {
               _bannerAdIsLoaded = true;
             });
           },
           onAdFailedToLoad: (Ad ad, LoadAdError error) {
-            print('$BannerAd failedToLoad: $error');
+            debugPrint('$BannerAd failedToLoad: $error');
             ad.dispose();
           },
-          onAdOpened: (Ad ad) => print('$BannerAd onAdOpened.'),
-          onAdClosed: (Ad ad) => print('$BannerAd onAdClosed.'),
+          onAdOpened: (Ad ad) => debugPrint('$BannerAd onAdOpened.'),
+          onAdClosed: (Ad ad) => debugPrint('$BannerAd onAdClosed.'),
         ),
-        request: AdRequest())
+        request: const AdRequest())
       ..load();
 
     _nativeAd = NativeAd(
       adUnitId: Platform.isAndroid
           ? 'ca-app-pub-3940256099942544/2247696110'
           : 'ca-app-pub-3940256099942544/3986624511',
-      request: AdRequest(),
-      factoryId: Keys.FACTORY_ID,
+      request: const AdRequest(),
+      factoryId: Keys.factoryId,
       listener: NativeAdListener(
         onAdLoaded: (Ad ad) {
-          print('$NativeAd loaded.');
+          debugPrint('$NativeAd loaded.');
           setState(() {
             _nativeAdIsLoaded = true;
           });
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
-          print('$NativeAd failedToLoad: $error');
+          debugPrint('$NativeAd failedToLoad: $error');
           ad.dispose();
         },
-        onAdOpened: (Ad ad) => print('$NativeAd onAdOpened.'),
-        onAdClosed: (Ad ad) => print('$NativeAd onAdClosed.'),
+        onAdOpened: (Ad ad) => debugPrint('$NativeAd onAdOpened.'),
+        onAdClosed: (Ad ad) => debugPrint('$NativeAd onAdClosed.'),
       ),
     )..load();
 
     _adManagerBannerAd = AdManagerBannerAd(
       adUnitId: '/6499/example/banner',
-      request: AdManagerAdRequest(nonPersonalizedAds: true),
+      request: const AdManagerAdRequest(nonPersonalizedAds: true),
       sizes: <AdSize>[AdSize.largeBanner],
       listener: AdManagerBannerAdListener(
         onAdLoaded: (Ad ad) {
-          print('$AdManagerBannerAd loaded.');
+          debugPrint('$AdManagerBannerAd loaded.');
           setState(() {
             _adManagerBannerAdIsLoaded = true;
           });
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
-          print('$AdManagerBannerAd failedToLoad: $error');
+          debugPrint('$AdManagerBannerAd failedToLoad: $error');
           ad.dispose();
         },
-        onAdOpened: (Ad ad) => print('$AdManagerBannerAd onAdOpened.'),
-        onAdClosed: (Ad ad) => print('$AdManagerBannerAd onAdClosed.'),
+        onAdOpened: (Ad ad) => debugPrint('$AdManagerBannerAd onAdOpened.'),
+        onAdClosed: (Ad ad) => debugPrint('$AdManagerBannerAd onAdClosed.'),
       ),
     )..load();
   }
